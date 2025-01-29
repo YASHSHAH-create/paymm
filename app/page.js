@@ -202,28 +202,82 @@ export default function LandingPage() {
 
           {/* Contact Us Section */}
           <motion.section
-            id="contact"
-            className="mt-20 text-center"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-          >
-            <h2 className="text-4xl font-bold text-blue-300">Contact Us</h2>
-            <p className="text-gray-300 mt-4">Email us at support@securecrypto.com</p>
+  id="contact"
+  className="mt-20 text-center"
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1 }}
+>
+  <h2 className="text-4xl font-bold text-blue-300">Contact Us</h2>
+  <p className="text-gray-300 mt-4">Email us at support@securecrypto.com</p>
 
-            <div className="mt-6">
-              <a
-                href="https://x.com/KashyapAkashh"  // Replace with your actual Twitter URL
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 mt-4 text-white bg-blue-500 hover:bg-blue-600 rounded-lg transition-all duration-300"
-              >
-                <Twitter className="mr-2" />
-                Follow us on X
-              </a>
-            </div>
-          </motion.section>
+  <div className="mt-6">
+    <form action="#" method="POST" className="max-w-xl mx-auto mt-8 space-y-6 p-10">
+      <div className="grid gap-4 md:grid-cols-2">
+        <div className="mb-4">
+          <label htmlFor="name" className="block text-gray-200 font-medium">
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            className="w-full px-4 py-2 mt-2 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="email" className="block text-gray-200 font-medium">
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            className="w-full px-4 py-2 mt-2 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+      </div>
+
+      <div className="mb-4">
+        <label htmlFor="message" className="block text-gray-200 font-medium">
+          Message
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          required
+          className="w-full px-4 py-2 mt-2 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        className="w-full py-3 text-white bg-blue-500 hover:bg-blue-600 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+        Send Message
+      </button>
+    </form>
+
+    <div className="mt-6">
+      <a
+        href="https://x.com/KashyapAkashh" // Replace with your actual Twitter URL
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center px-6 py-3 mt-4 text-white bg-blue-500 hover:bg-blue-600 rounded-lg transition-all duration-300"
+      >
+        <Twitter className="mr-2" />
+        Follow us on X
+      </a>
+    </div>
+  </div>
+</motion.section>
+
+
           <footer className="mt-20 bg-gray-800 bg-opacity-80 text-gray-400 text-center p-6 rounded-t-lg backdrop-blur-md">
         &copy; 2025 Secure Payments | All Rights Reserved
       </footer>
