@@ -27,10 +27,12 @@ export default function LandingPage() {
 
   // Spinner component
   const Spinner = () => (
-    <div className="flex justify-center items-center h-screen">
-      <div className="w-16 h-16 border-4 border-t-4 border-blue-300 rounded-full animate-spin"></div>
+    <div className="flex flex-col justify-center items-center h-screen">
+      <div className="w-16 h-16 border-4 border-t-4 border-blue-500 rounded-full animate-spin"></div>
+      <p className="mt-4 text-blue-500">Loading...</p>
     </div>
   );
+  
 
   return (
     <div className="bg-gray-900 text-white min-h-screen">
